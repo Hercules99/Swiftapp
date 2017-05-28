@@ -19,23 +19,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var text2: UITextField!
     
     
-
+    
     @IBAction func buttonTapped(_ sender: Any) {
         
-      Label.text =  "\(Int(text1.text!)! + Int(text2.text!)!)"
-
+        let addition = true
+        
+        if addition {
+            Label.text =  "\(Int(text1.text!)! + Int(text2.text!)!)"
+        } else {
+            Label.text =  "\(Int(text1.text!)! - Int(text2.text!)!)"
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
